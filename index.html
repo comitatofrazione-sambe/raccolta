@@ -240,31 +240,31 @@
     </footer>
 
     <script>
-        let amount = 6000;  // Cambia qui tali
+    let amount = 6000;  // Cambia qui l'importo raccolto
 
-        function updateProgress() {
-            let percentage = (amount / 10000) * 100;
-            document.getElementById("collected-amount").textContent = amount;
-            document.getElementById("progress-text").textContent = Math.round(percentage * 10) / 10 + "%";
+    function updateProgress() {
+        let percentage = (amount / 10000) * 100;
+        document.getElementById("collected-amount").textContent = amount;
+        document.getElementById("progress-text").textContent = Math.round(percentage * 10) / 10 + "%";
 
-            let progressCircle = document.querySelector(".progress-bar");
-            let circumference = 2 * Math.PI * 60;
-            let offset = circumference * (1 - percentage / 100);
-            progressCircle.style.strokeDasharray = `${circumference - offset} ${circumference}`;
+        let progressCircle = document.querySelector(".progress-bar");
+        let circumference = 2 * Math.PI * 60;
+        let offset = circumference * (1 - percentage / 100);
+        progressCircle.style.strokeDasharray = `${circumference - offset} ${circumference}`;
 
-            // Aggiorna i sotto-obiettivi
-            let subGoals = document.querySelectorAll(".sub-goal");
-            let subGoalCircumference = 2 * Math.PI * 30;
-            subGoals.forEach((goal, index) => {
-                let subGoalPercentage = Math.min((amount - index * 2000) / 2000, 1) * 100;
-                let subGoalOffset = subGoalCircumference * (1 - subGoalPercentage / 100);
-                goal.style.strokeDasharray = `${subGoalCircumference - subGoalOffset} ${subGoalCircumference}`;
-                goal.style.stroke = subGoalPercentage > 0 ? "#28a745" : "#ccc";
-            });
-        }
+        // Aggiorna i sotto-obiettivi
+        let subGoals = document.querySelectorAll(".sub-goal");
+        let subGoalCircumference = 2 * Math.PI * 30;
+        subGoals.forEach((goal, index) => {
+            let subGoalPercentage = Math.min((amount - index * 2000) / 2000, 1) * 100;
+            let subGoalOffset = subGoalCircumference * (1 - subGoalPercentage / 100);
+            goal.style.strokeDasharray = `${subGoalCircumference - subGoalOffset} ${subGoalCircumference}`;
+            goal.style.stroke = subGoalPercentage > 0 ? "#28a745" : "#ccc";
+        });
+    }
 
-        updateProgress(); // Inizializza la barra
-    </script>
+    updateProgress(); // Inizializza la barra
+</script>
 
 </body>
 </html>
