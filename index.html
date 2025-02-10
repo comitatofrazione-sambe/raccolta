@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comitato di Frazione S.Benigno - Sostieni il Progetto!</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            background: url('./img/sfondo2.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            background-color: rgba(0, 0, 0, 0.5); /* Sovrappone un colore scuro semi-trasparente per migliorare il contrasto */
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 15px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #fddb40;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Ombra per migliorare la leggibilità */
+            font-weight: bold;
+        }
+
+        .lead {
+            font-size: 1.2rem;
+            color: #989898;
+            font-family: 'Bold', sans-serif;
+        }
+
+        .header {
+            background-color: #c9e165; /* Verde per l'header */
+            color: white;
+            padding: 0px 0;
+            border-bottom: 5px solid #ffc107; /* Bordo giallo */
+            text-align: center;
+        }
+
+        .header img {
+            max-width: 20%;
+            height: auto;
+        }
+
+        .highlight {
+            color: #ff0000; /* Rosso-arancione per il 1000€ */
+        }
+
+        .progress-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px auto;
+            flex-direction: column;
+        }
+
+        .progress-circle {
+            fill: none;
+            stroke: #fff99f;
+            stroke-width: 12;
+        }
+
+        .progress-bar {
+            fill: none;
+            stroke: #28a745;
+            stroke-width: 12;
+            stroke-linecap: round;
+            transform: rotate(-90deg); /* Ruota il cerchio per far partire il progresso dall'alto */
+            transform-origin: 50% 50%;
+            transition: stroke-dasharray 0.8s ease-in-out;
+        }
+
+        .progress-text {
+            font-size: 1.5rem;
+            font-weight: bold;
+            fill: #333;
+        }
+
+        .sub-goals-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .sub-goal {
+            width: 60px;
+            height: 60px;
+            margin: 0 10px;
+            fill: none;
+            stroke: #ccc;
+            stroke-width: 4;
+            stroke-linecap: round;
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+        }
+
+        .sub-goal-text {
+            font-size: 0.8rem;
+            font-weight: bold;
+            fill: #333;
+            text-anchor: middle;
+        }
+
+        p strong {
+            font-size: 1.2rem;
+            color: #868686;
+        }
+
+        .footer {
+            background: #343a40;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 1rem;
+            border-top: 5px solid #ffc107;
+        }
+
+        .footer p {
+            font-size: 0.7rem;
+        }
+
+        .footer a {
+            color: #ffc107;
+            text-decoration: none;
+            font-size: 0.55rem;
+        }
+
+        .social-icons {
+            margin-top: 0px;
+        }
+
+        .social-icons a {
+            margin: 0 0px;
+            font-size: 1.2rem;
+            color: #ffc107;
+        }
+
+        .social-icons a:hover {
+            color: #28a745;
+        }
+
+        .fundraising-status {
+            font-size: 1.2rem;
+            font-family: 'Poppins', sans-serif;
+            color: #2ca0ff;
+            text-align: center;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .fundraising-card {
+            background-color: #c9e165; /* Verde chiaro per abbinarsi al tema */
+            color: #333; /* Colore scuro per il testo */
+            padding: 15px;
+            border-radius: 8px;
+            border: 2px solid #28a745; /* Bordo verde scuro */
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <img src="./img/Immagine_2025-02-05_140331-removebg-preview.png" alt="Logo"> <!-- Aggiungi qui l'URL dell'immagine -->
+    </div>
+
+    <div class="container text-center">
+        <h1>🌍 Sostieni il Progetto della Nostra Rotonda!</h1>
+        <p class="lead">Aiutaci a raggiungere il nostro obiettivo di <span class="highlight">10 000€</span> !</p>
+
+        <br>
+        <br>
+
+        <div class="image-container">
+            <b><p class="fundraising-status">📊 Stato raccolta fondi</p></b>
+        </div>
+
+        <br>
+
+        <div class="progress-container">
+            <svg width="150" height="150">
+                <circle cx="75" cy="75" r="60" class="progress-circle"></circle>
+                <circle cx="75" cy="75" r="60" class="progress-bar" stroke-dasharray="0 377"></circle>
+                <text x="75" y="85" text-anchor="middle" class="progress-text" id="progress-text">0%</text>
+            </svg>
+
+            <div class="sub-goals-container">
+                <svg width="70" height="70">
+                    <circle cx="35" cy="35" r="30" class="sub-goal" id="sub-goal-1"></circle>
+                    <text x="35" y="40" text-anchor="middle" class="sub-goal-text">2000</text>
+                </svg>
+                <svg width="70" height="70">
+                    <circle cx="35" cy="35" r="30" class="sub-goal" id="sub-goal-2"></circle>
+                    <text x="35" y="40" text-anchor="middle" class="sub-goal-text">2000</text>
+                </svg>
+                <svg width="70" height="70">
+                    <circle cx="35" cy="35" r="30" class="sub-goal" id="sub-goal-3"></circle>
+                    <text x="35" y="40" text-anchor="middle" class="sub-goal-text">2000</text>
+                </svg>
+                <svg width="70" height="70">
+                    <circle cx="35" cy="35" r="30" class="sub-goal" id="sub-goal-4"></circle>
+                    <text x="35" y="40" text-anchor="middle" class="sub-goal-text">2000</text>
+                </svg>
+                <svg width="70" height="70">
+                    <circle cx="35" cy="35" r="30" class="sub-goal" id="sub-goal-5"></circle>
+                    <text x="35" y="40" text-anchor="middle" class="sub-goal-text">2000</text>
+                </svg>
+            </div>
+        </div>
+
+        <br>
+        <br>
+        <br>
+
+        <!-- Card per "Raccolti" -->
+        <div class="fundraising-card">
+            Raccolti: <span id="collected-amount">0</span> su 10 000 €
+        </div>
+
+        <br>
+        <br>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>📩 Contattaci: <a href="mailto:cdq.sanbenigno@email.comune.cuneo.it">cdq.sanbenigno@email.comune.cuneo.it</a></p>
+            <p>📞 Marco: <a href="tel:+393397441712">+39 339 744 1712</a></p>
+            <p>📞 Michela: <a href="tel:+393937878091">+39 393 787 8091</a></p>
+            <p>📸 Social: <a href="https://www.instagram.com/comitatofrazione_sanbenigno?igsh=ZWtpOHkxc2dnMzY1">Instagram</a></p>
+        </div>
+    </footer>
+
+    <script>
+        let amount = 6000;  // Cambia qui tali
+
+        function updateProgress() {
+            let percentage = (amount / 10000) * 100;
+            document.getElementById("collected-amount").textContent = amount;
+            document.getElementById("progress-text").textContent = Math.round(percentage * 10) / 10 + "%";
+
+            let progressCircle = document.querySelector(".progress-bar");
+            let circumference = 2 * Math.PI * 60;
+            let offset = circumference * (1 - percentage / 100);
+            progressCircle.style.strokeDasharray = `${circumference - offset} ${circumference}`;
+
+            // Aggiorna i sotto-obiettivi
+            let subGoals = document.querySelectorAll(".sub-goal");
+            let subGoalCircumference = 2 * Math.PI * 30;
+            subGoals.forEach((goal, index) => {
+                let subGoalPercentage = Math.min((amount - index * 2000) / 2000, 1) * 100;
+                let subGoalOffset = subGoalCircumference * (1 - subGoalPercentage / 100);
+                goal.style.strokeDasharray = `${subGoalCircumference - subGoalOffset} ${subGoalCircumference}`;
+                goal.style.stroke = subGoalPercentage > 0 ? "#28a745" : "#ccc";
+            });
+        }
+
+        updateProgress(); // Inizializza la barra
+    </script>
+
+</body>
+</html>
