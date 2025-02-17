@@ -1,3 +1,8 @@
+click destro su index.html -> modifica nelò blocco note -> ctrl+f "amount" -> cambio il valore
+
+win+r enter
+
+cd Desktop/raccolta
 git add .
 git commit -m "mod"
 git push origin main
