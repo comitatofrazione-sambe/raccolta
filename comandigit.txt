@@ -1,8 +1,13 @@
-click destro su index.html -> modifica nelò blocco note -> ctrl+f "amount" -> cambio il valore
+click destro su index.html -> modifica nel blocco note -> ctrl+f "amount" -> cambio il valore
 
 win+r enter
 
-cd Desktop/raccolta
+
+!!!!!!!uno per volta
+C:\Users\Utente\Desktop\Comitato di frazione\2025\raccolta
 git add .
 git commit -m "mod"
 git push origin main
+
+
+https://comitatofrazione-sambe.github.io/raccolta
